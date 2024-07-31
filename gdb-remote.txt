@@ -1,0 +1,2 @@
+target create build/k7x.elf
+gdb-remote localhost:1234
