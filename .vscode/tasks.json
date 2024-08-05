@@ -1,0 +1,13 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "run-qemu",
+            "type": "shell",
+            "command": "make && qemu-system-aarch64 -M raspi3b -kernel build/k7x.img -s -S",
+            "isBackground": true
+        }
+    ]
+}
