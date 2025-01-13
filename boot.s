@@ -1,4 +1,4 @@
-.section .text.boot
+.global _start
 
 _start:
     // if cpu0, -> 2f; if cpu1-3, -> 1f
@@ -17,5 +17,5 @@ _start:
     str xzr, [x1], #8
     sub w2, w2, #1
     cbnz w2, 3b
-4:  bl __c_start
+4:  bl init
     b 1b
